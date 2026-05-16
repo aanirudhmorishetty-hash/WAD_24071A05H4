@@ -24,15 +24,12 @@ git branch -M main
 :: Add the remote repository (ignores error if it already exists)
 git remote add origin https://github.com/aanirudhmorishetty-hash/WAD_24071A05H4.git 2>nul
 
-:: Push the code to the repository
-echo Pushing to GitHub...
-git push -u origin main
+:: Force push to overwrite the remote repository with your local code
+echo Pushing to GitHub (Forcing update to resolve conflicts)...
+git push -u origin main --force
 
 echo.
 echo ====================================
 echo Process complete! 
-echo.
-echo NOTE: If you previously saw "warning: LF will be replaced by CRLF", 
-echo that is completely normal on Windows and does not affect your code!
 echo ====================================
 pause
